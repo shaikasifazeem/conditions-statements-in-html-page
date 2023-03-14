@@ -1,0 +1,66 @@
+<!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<body style="background-color: violet;">
+    <center style="background-color: blue;">
+        <h1>
+            {% if name > age %}
+                <h1> statement inside the if condition</h1>
+            {% endif %}
+        </h1>
+    </center>
+    
+    <center style="background-color: chartreuse;">
+        <h1>
+            {% if name > age and name > madhu %}
+                <h2> {{name}} </h2>
+            {% elif age > madhu  %}
+                <h2> {{age}}</h2>
+            {% else %}
+                <h2> {{madhu}} </h2>
+            {% endif %}
+        </h1>
+    </center>
+    <center style="background-color: aqua;">
+        <h1>
+            {% if name < age %}
+                <h1> statement of if block </h1>
+            {% else %}
+                <h1> statement of else block </h1>
+            {% endif %}
+        </h1>
+    </center>
+    <center style="background-color: darkviolet;">
+        <h1>
+            {% if name > age  %}
+                {% if name > madhu %}
+                    {{name}}
+                    <h1> name is max </h1>
+                    <h1> inner  nested if block </h1>
+                {% else %}
+                    {{name}}
+                    <h1> madhu is max</h1>
+                {% endif %}
+
+            {%  else %}
+                {% if age > madhu %}
+                    {{age}}
+                    <h1> age is max </h1>
+                {% else %}
+                    {{madhu}}
+                    <h1>madhu is max </h1>
+                {% endif %}
+            {% endif %}
+
+        </h1>
+    </center>
+    
+
+    
+</body>
+</html>
